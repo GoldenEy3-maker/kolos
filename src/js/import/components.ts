@@ -16,12 +16,14 @@ import {
   PlacesImagesSlider,
   PlacesTextSlider,
 } from "../../blocks/components/places/places";
+import Mask from "../classes/Mask";
 
 const init = () => {
   new PageLoader();
   new Construction();
   Sliders();
   Maps();
+  new Mask(".js-mask-phone");
 };
 
 const Maps = () => {
