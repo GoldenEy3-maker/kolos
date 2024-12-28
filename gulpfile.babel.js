@@ -62,7 +62,7 @@ const paths = {
 
   images: {
     src: [
-      "./src/img/**/*.{jpg,jpeg,png,gif,tiff,webp,svg,mp4}",
+      "./src/img/**/*.{jpg,jpeg,png,gif,tiff,webp,svg,icon,mp4}",
       "!./src/img/favicon/*.{jpg,jpeg,png,gif,webp,tiff}",
     ],
     dist: "./dist/img/",
@@ -93,6 +93,10 @@ const paths = {
     src: "./src/img/favicon/*.{jpg,jpeg,png,gif,tiff}",
     dist: "./dist/img/favicons/",
   },
+  manifest: {
+    src: "./src/site.webmanifest",
+    dist: "./dist/",
+  },
   gzip: {
     src: "./src/.htaccess",
     dist: "./dist/",
@@ -101,6 +105,10 @@ const paths = {
 
 gulp.task("clean", () => {
   return del(["./dist/*"]);
+});
+
+gulp.task("manifest", () => {
+  return gulp.src(paths.manifest.src).pipe(gulp.dest(paths.manifest.dist));
 });
 
 gulp.task("favicons", () => {
@@ -341,6 +349,7 @@ export const development = gulp.series(
     "sprites",
     "fonts",
     "favicons",
+    "manifest",
   ]),
   gulp.parallel("serve"),
 );
@@ -355,6 +364,7 @@ export const prod = gulp.series(
     "sprites",
     "fonts",
     "favicons",
+    "manifest",
     "gzip",
   ]),
 );
