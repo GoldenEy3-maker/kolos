@@ -1,0 +1,66 @@
+.modal {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-300%);
+    visibility: hidden;
+    @apply transition-all duration-1000;
+
+    &__wrapper {
+        margin: auto 0;
+    }
+
+    &.active {
+        transform: translateY(0);
+        visibility: visible;
+    }
+
+    @apply bg-primary;
+}
+
+.modal-form {
+
+    &__title {
+        font-size: 60px;
+        font-weight: 400;
+
+        margin-bottom: 1.333em;
+
+        @apply text-text;
+
+        @media(max-width: 756px) {
+            font-size: 35px;
+        }
+    }
+
+    &.active {}
+
+    .form__footer p {
+        width: 50%;
+
+        @media(max-width: 576px) {
+            width: 100%;
+        }
+    }
+
+    .form {
+        padding: 0;
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    &.active {
+        .form {
+            opacity: 1;
+            transform: translateY(0);
+            @apply transition-all duration-1000 delay-[1400ms];
+        }
+
+    }
+
+}

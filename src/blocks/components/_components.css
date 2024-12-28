@@ -1,0 +1,15 @@
+@import "first/first.css";
+@import "link/link.css";
+@import "news/news.css";
+@import "benefits/benefits.css";
+@import "payment/payment.css";
+@import "construction/construction.css";
+@import "location/location.css";
+@import "places/places.css";
+@import "panorama/panorama.css";
+@import "form/form.css";
+@import "info/info.css";
+@import "history/history.css";
+@import "detail-slider/detail-slider.css";
+@import "plans-slider/plans-slider.css";
+@import "view-slider/view-slider.css";

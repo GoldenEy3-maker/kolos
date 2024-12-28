@@ -1,0 +1,46 @@
+mixin detail-slider(id)
+  div(id=id, class="swiper detail-slider js-detail-slider", class={"active": id == 1})
+    div(class="swiper-wrapper")
+      div(class="swiper-slide")
+        img(src=`img/detail-slider/${id}.webp`, loading="lazy")
+    //- div(class="swiper-navigation detail-slider__navigation")
+    //-   div(class="js-detail-slider-prev")
+    //-     svg(
+    //-       width="24",
+    //-       height="24",
+    //-       viewBox="0 0 24 24",
+    //-       fill="none",
+    //-       xmlns="http://www.w3.org/2000/svg"
+    //-     )
+    //-       path(
+    //-         fill-rule="evenodd",
+    //-         clip-rule="evenodd",
+    //-         d="M16.6581 24L21 24L13.9702 14.9899C12.2494 12.7843 12.188 11.9988 9.45991 11.9988L3 11.9988L10.0298 21.0089C11.7509 23.215 13.9297 24 16.6581 24Z",
+    //-         fill="currentColor"
+    //-       )
+    //-       path(
+    //-         fill-rule="evenodd",
+    //-         clip-rule="evenodd",
+    //-         d="M16.6581 1.71756e-06L21 1.90735e-06L13.9702 9.01011C12.2494 11.2157 12.188 12.0012 9.45991 12.0012L3 12.0012L10.0298 2.99106C11.7509 0.784998 13.9297 1.59829e-06 16.6581 1.71756e-06Z",
+    //-         fill="currentColor"
+    //-       )
+    //-   div(class="js-detail-slider-next")
+    //-     svg(
+    //-       width="24",
+    //-       height="24",
+    //-       viewBox="0 0 24 24",
+    //-       fill="none",
+    //-       xmlns="http://www.w3.org/2000/svg"
+    //-     )
+    //-       path(
+    //-         fill-rule="evenodd",
+    //-         clip-rule="evenodd",
+    //-         d="M7.34194 24L3 24L10.0298 14.9899C11.7506 12.7843 11.812 11.9988 14.5401 11.9988L21 11.9988L13.9702 21.0089C12.2491 23.215 10.0703 24 7.34194 24Z",
+    //-         fill="currentColor"
+    //-       )
+    //-       path(
+    //-         fill-rule="evenodd",
+    //-         clip-rule="evenodd",
+    //-         d="M7.34194 1.71756e-06L3 1.90735e-06L10.0298 9.01011C11.7506 11.2157 11.812 12.0012 14.5401 12.0012L21 12.0012L13.9702 2.99106C12.2491 0.784998 10.0703 1.59829e-06 7.34194 1.71756e-06Z",
+    //-         fill="currentColor"
+    //-       )

@@ -1,0 +1,45 @@
+.payment {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: clamp(1.5rem, 0.9643rem + 1.3393vw, 2.25rem);
+  }
+
+  &__partners {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    place-items: center;
+    place-content: center;
+    grid-auto-rows: 5rem;
+    margin-top: 4.125rem;
+    gap: 1.5rem 0;
+    /* gap: clamp(1.5rem, 0.9643rem + 1.3393vw, 2.25rem); */
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: clamp(1.25rem, 0.7143rem + 1.3393vw, 2rem)
+      clamp(1.75rem, 1.2143rem + 1.3393vw, 2.5rem);
+    border-radius: 0.625rem;
+    min-height: clamp(11rem, 8.1429rem + 7.1429vw, 15rem);
+    @apply bg-white;
+  }
+
+  &__title {
+    font-family: "IBMPlexSerif", serif;
+    font-style: italic;
+    /* font-size: 2.25rem; */
+    /* font-weight: 700; */
+    /* line-height: 1.2; */
+    @apply text-primary;
+  }
+
+  &__text {
+    margin: 0;
+    margin-top: auto;
+    line-height: 1.4;
+    font-size: clamp(1rem, 0.9107rem + 0.2232vw, 1.125rem);
+  }
+}

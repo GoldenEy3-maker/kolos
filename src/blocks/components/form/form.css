@@ -1,0 +1,125 @@
+.form {
+  padding: 2.5rem 3.75rem;
+  @apply bg-primary;
+
+  .js-message {
+    margin: -20px 0 50px;
+    font-size: 14px;
+    font-weight: 400;
+    min-height: 16px;
+    @apply text-text;
+  }
+
+  @media (max-width: 1240px) {
+    padding: 40px 30px;
+  }
+
+  label {
+    position: relative;
+    margin-bottom: 60px;
+    display: block;
+
+    @media (max-width: 576px) {
+      margin-bottom: 40px;
+    }
+
+    p {
+      position: absolute;
+      top: -1px;
+      left: 0;
+      user-select: none;
+
+      @apply transition-all duration-300;
+    }
+
+    p,
+    input {
+      font-size: 16px;
+      font-weight: 400;
+      @apply text-text;
+    }
+
+    span {
+      display: none;
+      font-size: 14px;
+      position: absolute;
+      top: -24px;
+      right: 0;
+      z-index: 1;
+      font-weight: 400;
+      @apply text-primary;
+    }
+
+    &.invalid {
+      p {
+        transform: translateY(-24px);
+        font-size: 14px;
+      }
+
+      span {
+        display: block;
+      }
+    }
+
+    &.focus {
+      p {
+        transform: translateY(-24px);
+        font-size: 14px;
+      }
+    }
+  }
+
+  input {
+    background-color: transparent;
+    border: none;
+    padding-bottom: 14px;
+    outline: none;
+    width: 100%;
+    border-bottom: 1px solid;
+    @apply border-text/40;
+  }
+
+  input:focus + p {
+    transform: translateY(-24px);
+    font-size: 14px;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    @media (max-width: 1200px) {
+      flex-wrap: wrap;
+    }
+
+    padding-right: 10px;
+
+    button {
+      flex-shrink: 0;
+      margin-right: 31px;
+      height: fit-content;
+
+      @media (max-width: 576px) {
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: 576px) {
+      padding-right: 0;
+    }
+
+    p {
+      margin: 0;
+      font-weight: 400;
+      font-size: 14px;
+      @apply text-text;
+
+      a {
+        @apply underline decoration-light underline-offset-4;
+      }
+    }
+  }
+}

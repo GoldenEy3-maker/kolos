@@ -1,0 +1,14 @@
+mixin construction-slider
+  div(class="swiper construction__slider js-construction-slider")
+    div(class="swiper-wrapper")
+      each item, index in [{date: "Ноябрь 2024", count: "5 фото", images: ["img/construction/november/1.jpg", "img/construction/november/2.jpg", "img/construction/november/3.jpg", "img/construction/november/4.jpg", "img/construction/november/5.jpg"]}, {date: "Декабрь 2024", count: "8 фото", images: ["img/construction/december/1.jpg", "img/construction/december/2.jpg", "img/construction/december/3.jpg", "img/construction/december/4.jpg", "img/construction/december/5.jpg", "img/construction/december/6.jpg", "img/construction/december/7.jpg", "img/construction/december/8.jpg"]}]
+        div(class="swiper-slide")
+          div(class="construction__images")
+            each image in item.images.slice(1)
+              a(data-fancybox=index, href=image)
+                img(src=image, loading="lazy")
+          a(href=item.images[0])(data-fancybox=index, class="construction__item")
+            img(src=item.images[0], loading="lazy", class="construction__img")
+            div(class="construction__content")
+              h5(class="construction__title")!= item.date
+              span(class="construction__subtitle")!= item.count

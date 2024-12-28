@@ -1,0 +1,71 @@
+.places {
+  &__wrapper {
+    gap: 1.25rem;
+
+    @media screen and (max-width: 991px) {
+      flex-wrap: wrap;
+    }
+  }
+  &__text {
+    position: relative;
+    border-radius: 1.25rem;
+    min-height: 17rem;
+    padding: clamp(1.5rem, 0.4286rem + 2.6786vw, 3rem)
+      clamp(1.25rem, 0.7143rem + 1.3393vw, 2rem);
+    @apply bg-primary;
+
+    &:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+      background-image: url("../img/items-pattern.svg");
+    }
+
+    .swiper {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      &-wrapper {
+        flex: 1;
+        margin-bottom: clamp(1rem, 0.2857rem + 1.7857vw, 2rem);
+        min-height: auto !important;
+      }
+
+      &-navigation {
+        margin: 0;
+      }
+
+      &-slide {
+        display: flex;
+        flex-direction: column;
+
+        p {
+          padding-top: 1.25rem;
+          margin: 0;
+          font-size: clamp(1rem, 0.8214rem + 0.4464vw, 1.25rem);
+          margin-top: auto;
+        }
+      }
+    }
+  }
+
+  &__images {
+    height: clamp(20rem, 10.1786rem + 24.5536vw, 33.75rem);
+    border-radius: 1.25rem;
+    overflow: hidden;
+
+    .swiper {
+      height: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

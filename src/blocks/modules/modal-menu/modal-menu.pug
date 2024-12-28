@@ -1,0 +1,26 @@
+mixin modal-menu
+  div(data-name="modal-menu", class="modal modal-menu js-modal")
+    div(class="modal__wrapper")
+      div(class="container")
+        div(class="flex flex-wrap modal__inner")
+          div(class="col-6")
+            div(class="modal-menu__list")
+              each item in [{title:"Квартиры", href:"#apartments"},{title:"О проекте", href:"#about"},{title:"Контакты", href:"#contacts"},{title:"Способы покупки", href:"#payment"},{title:"Ход строительства", href:"#progress"}]
+                div(class="modal-menu__item")
+                  a(href=item.href)= item.title
+          div(class="col-2")
+          div(class="col-3")
+            div(class="modal-menu__contacts")
+              div(class="modal-menu__contact")
+                div(class="modal-menu__contact-title") Адрес дома и офиса продаж:
+                div(class="modal-menu__contact-subtitle") Барнаул, ул. Интернациональная 8
+              div(class="modal-menu__contact")
+                div(class="modal-menu__contact-title") Отдел продаж:
+                div(class="modal-menu__contact-subtitle")
+                  a(href="tel:+73852631010") +7 (3852) 58-49-16
+          div(class="col-1")
+        div(class="flex justify-end modal-menu__social")
+          div(class="flex footer__social")
+            each item in [{href:"#", img:"img/social/inst.svg"}, {href:"#", img:"img/social/vk.svg"}, {href:"#", img:"img/social/tg.svg"}]
+              a(href=item.href, class="block footer__social-item")
+                img(src=item.img, loading="lazy")

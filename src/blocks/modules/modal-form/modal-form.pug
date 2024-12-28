@@ -1,0 +1,36 @@
+mixin modal-form
+  div(data-name="modal-form", class="modal modal-form js-modal-form")
+    div(class="modal__wrapper")
+      div(class="container")
+        div(class="flex flex-wrap modal__inner")
+          form(
+            action="/test/form.json",
+            data-dopinfo="",
+            class="col-7 col-md-9 col-td-12 form js-form-modal"
+          )
+            div(class="modal-form__title white js-form-title") Обратный звонок
+            div(class="message js-message")
+            label(class="js-form-label")
+              span Некорректно введенное имя
+              input(
+                type="text",
+                name="name",
+                data-required="true",
+                data-type="text"
+              )
+              p Ваше имя
+            label(class="js-form-label")
+              span Некорректно введенный телефон
+              input(
+                type="text",
+                name="phone",
+                data-required="true",
+                data-type="phone"
+              )
+              p Телефон
+            div(class="flex form__footer")
+              p Нажимая кнопку, вы соглашаетесь
+                br 
+                | с&nbsp;нашей политикой 
+                a(href="#") обработки персональных данных
+              button(type="submit", class="light link") Заказать звонок

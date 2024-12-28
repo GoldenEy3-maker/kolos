@@ -1,0 +1,90 @@
+.header {
+  position: absolute;
+  z-index: 101;
+  width: 100%;
+  padding-block: 1rem;
+
+  &__nav {
+    @media screen and (max-width: 1220px) {
+      a {
+        display: none;
+      }
+    }
+
+    a {
+      border-radius: 12px;
+      transition: all 0.3s ease;
+
+      @media (hover: hover) {
+        &:hover {
+          @apply shadow-[0_0_0_1px] shadow-white;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    svg {
+      max-width: 100%;
+      path {
+        @apply transition-all delay-[100ms] duration-[300ms];
+      }
+    }
+  }
+
+  &__phone {
+    padding: 0.75rem 2rem;
+    @apply !text-primary;
+
+    @media (hover: hover) {
+      &:hover {
+        @apply !text-text;
+      }
+    }
+
+    @media (max-width: 910px) {
+      display: none;
+    }
+  }
+  &__button {
+    margin-right: 45px;
+    @media (max-width: 991px) {
+      margin-right: 30px;
+    }
+    @media (max-width: 910px) {
+      display: none;
+    }
+  }
+
+  &__burger {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    width: 35px;
+    height: 35px;
+
+    svg {
+      @apply transition-all duration-500;
+    }
+    &.active {
+      position: relative;
+
+      svg {
+        &:first-child {
+          transform: translate(0, 0) rotate(-45deg) scaleX(-1);
+        }
+        &:last-child {
+          transform: translate(0, -12px) rotate(45deg);
+        }
+      }
+    }
+
+    @media screen and (min-width: 1220px) {
+      display: none;
+    }
+  }
+}

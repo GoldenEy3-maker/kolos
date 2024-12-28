@@ -1,0 +1,118 @@
+{
+  "data": {
+    "options": {
+      "zoom": 12,
+      "disables": [],
+      "centerCoord" :
+      {
+        "x": 53.332790,
+        "y": 83.788499
+      }
+    },
+    "data": [
+      {
+        "coords": {
+          "x": 53.3322790,
+          "y": 83.788499
+        },
+        "hintContent": "ЖК Вечер",
+        "baloonContent": "ЖК Вечер",
+        "type": "all",
+        "img": {
+          "href": "/img/map/marker.svg",
+          "size": {"x": 40,"y": 40},
+          "offset": {"x": -20,"y": -54}}
+      },
+      {
+        "coords": {
+          "x": 53.33252332,
+          "y": 83.78743798
+        },
+        "hintContent": "Медицина",
+        "baloonContent": "Медицина",
+        "type": "health",
+        "img": {
+          "href": "/img/map/health.svg",
+          "size": {"x": 40,"y": 40},
+          "offset": {"x": -20,"y": -54}}
+      },
+      {
+        "coords": {
+          "x": 53.33254532,
+          "y": 83.78774598
+        },
+        "hintContent": "Супермаркет",
+        "baloonContent": "Супермаркет",
+        "type": "supermarket",
+        "img": {
+          "href": "/img/map/cart.svg",
+          "size": {"x": 40,"y": 40},
+          "offset": {"x": -20,"y": -54}}
+      }
+      ,{
+        "coords": {
+          "x": 53.33222532,
+          "y": 83.78347798
+        },
+        "hintContent": "Досуг",
+        "baloonContent": "Досуг",
+        "type": "dosug",
+        "img": {
+          "href": "/img/map/coffee.svg",
+          "size": {"x": 40,"y": 40},
+          "offset": {"x": -20,"y": -54}}
+      },
+      {
+        "coords": {
+          "x": 53.3325532,
+          "y": 83.7874798
+        },
+        "hintContent": "Поесть",
+        "baloonContent": "Поесть",
+        "type": "cafe",
+        "img": {
+          "href": "/img/map/cafe.svg",
+          "size": {"x": 40,"y": 40},
+          "offset": {"x": -20,"y": -54}}
+      },{
+        "coords": {
+          "x": 53.3312532,
+          "y": 83.78347798
+        },
+        "hintContent": "Медицина",
+        "baloonContent": "Медицина",
+        "type": "health",
+        "img": {
+          "href": "/img/map/health.svg",
+          "size": {"x": 40,"y": 40},
+          "offset": {"x": -20,"y": -54}}
+      },{
+        "coords": {
+          "x": 53.3352532,
+          "y": 83.7837798
+        },
+        "hintContent": "Спорт",
+        "baloonContent": "Спорт",
+        "type": "sports",
+        "img": {
+          "href": "/img/map/sport.svg",
+          "size": {"x": 40,"y": 40},
+          "offset": {"x": -20,"y": -54}}
+      },{
+        "coords": {
+          "x": 53.3332532,
+          "y": 83.7817798
+        },
+        "hintContent": "Музей",
+        "baloonContent": "Музей",
+        "type": "sights",
+        "img": {
+          "href": "/img/map/museum.svg",
+          "size": {"x": 40,"y": 40},
+          "offset": {"x": -20,"y": -54}}
+      }
+
+    ]
+  }
+}
+

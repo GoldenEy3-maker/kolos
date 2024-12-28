@@ -1,0 +1,59 @@
+include ../../components/link/link
+mixin header
+  header(class="header")
+    div(class="container")
+      div(class="flex items-center justify-between gap-[1.875rem]")
+        a(href="/", class="header__logo")
+          include ../../components/svg/logo
+        nav(class="header__nav flex flex-1 items-center justify-end")
+          a(href="#apartments", class="px-5 py-2 text-lg text-white") Квартиры
+          a(href="#news", class="px-5 py-2 text-lg text-white") Новости
+          a(href="#about", class="px-5 py-2 text-lg text-white") О застройщике
+          a(href="#contacts", class="px-5 py-2 text-lg text-white") Контакты
+        a(class="outlined link header__phone", href="tel:+73852556666") +7 (3852) 55-66-66
+        div(class="header__burger js-modal-menu-toggle js-modal-reset")
+          svg(
+            width="35",
+            height="6",
+            viewBox="0 0 35 6",
+            fill="none",
+            xmlns="http://www.w3.org/2000/svg"
+          )
+            path(
+              fill-rule="evenodd",
+              clip-rule="evenodd",
+              d="M28.4943 4.17657L35 0.0491217L15.7841 0.000159538C11.0804 -0.0118506 8.34771 0.654764 6.50589 1.82329L7.17876e-07 5.95088L19.2159 5.99984C23.9206 6.01187 26.6523 5.34524 28.4943 4.17657Z",
+              fill="white"
+            )
+          svg(
+            width="35",
+            height="6",
+            viewBox="0 0 35 6",
+            fill="none",
+            xmlns="http://www.w3.org/2000/svg"
+          )
+            path(
+              fill-rule="evenodd",
+              clip-rule="evenodd",
+              d="M28.4943 4.17657L35 0.0491217L15.7841 0.000159538C11.0804 -0.0118506 8.34771 0.654764 6.50589 1.82329L7.17876e-07 5.95088L19.2159 5.99984C23.9206 6.01187 26.6523 5.34524 28.4943 4.17657Z",
+              fill="white"
+            )
+          //- svg(
+          //-   width="32",
+          //-   height="42",
+          //-   viewBox="0 0 32 42",
+          //-   fill="none",
+          //-   xmlns="http://www.w3.org/2000/svg"
+          //- )
+          //-   path(
+          //-     fill-rule="evenodd",
+          //-     clip-rule="evenodd",
+          //-     d="M1.44227 17.9135L4.60013 12.7745L12.3208 12.8878L17.7752 12.9392L31.2276 12.742L28.046 17.9197L20.3254 17.8064L14.8591 17.8064L1.44227 17.9135Z",
+          //-     fill="white"
+          //-   )
+          //-   path(
+          //-     fill-rule="evenodd",
+          //-     clip-rule="evenodd",
+          //-     d="M0.92368 24.7402L4.08097 29.8796L11.8016 29.7672L17.2561 29.7164L30.7084 29.9151L27.5274 24.737L19.1424 24.737L14.3014 24.7402L0.92368 24.7402Z",
+          //-     fill="white"
+          //-   )

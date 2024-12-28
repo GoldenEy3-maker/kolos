@@ -1,0 +1,135 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-300%);
+  visibility: hidden;
+  @apply transition-all duration-1000;
+
+  &__wrapper {
+    margin: auto 0;
+    max-height: 100vh;
+    overflow: auto;
+  }
+
+  &.active {
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+  @apply bg-primary;
+}
+
+.modal-news {
+  @apply bg-primary;
+  .modal-news__inner {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  &.active {
+    .modal-news__inner {
+      opacity: 1;
+      transform: translateY(0);
+      @apply transition-all delay-[1400ms] duration-1000;
+    }
+  }
+
+  &__inner {
+    /*
+        padding: 190px 0 120px;
+
+        @media(max-width: 991px) {
+            padding: 90px 0;
+        }
+        */
+  }
+
+  &__header {
+    margin-bottom: 120px;
+    @media (max-width: 991px) {
+      margin-bottom: 60px;
+    }
+  }
+  &__title {
+    font-size: 96px;
+    font-weight: 400;
+    @apply text-text;
+
+    @media (max-width: 991px) {
+      font-size: 40px;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 35px;
+    }
+  }
+  &__time {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    @apply text-text;
+  }
+
+  .col-4 {
+    @media (max-width: 576px) {
+      margin-top: 20px;
+    }
+  }
+
+  &__container {
+    p {
+      margin-bottom: 0.5em;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.4;
+      @apply text-text;
+
+      @media (max-width: 991px) {
+        font-size: 20px;
+      }
+      @media (max-width: 576px) {
+        font-size: 16px;
+      }
+    }
+    h6,
+    li {
+      margin-bottom: 20px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 1.4;
+      @apply text-text;
+      @media (max-width: 576px) {
+        font-size: 16px;
+      }
+    }
+
+    ol,
+    ul {
+      margin: 20px 0;
+      @media (max-width: 576px) {
+        margin: 10px 0;
+      }
+      li {
+        margin-bottom: 0;
+        font-weight: 400;
+      }
+    }
+  }
+  &__img {
+    margin-bottom: 60px;
+
+    @media (max-width: 576px) {
+      margin-bottom: 40px;
+    }
+    img {
+      border-radius: 3px;
+      max-width: 500px;
+      width: 100%;
+    }
+  }
+}

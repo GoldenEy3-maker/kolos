@@ -1,0 +1,25 @@
+mixin plans-slider
+  section#apartments(class="relative")
+    div(class="container")
+      div(class="section__header")
+        span(class="section__subtitle") Квартиры
+        h2(class="section__title") Планировочные решения
+          br
+          | для притязательных
+      div(class="home-layouts")
+        div(class="home-layouts__tabs")
+          div(data-tab="0", class="home-layouts__tab") Студия
+        div(class="flex flex-wrap")
+          div(class="col-2 col-md-0 relative")
+            div(class="home-layouts__mini-blocks")
+          div(class="col-10 col-md-12")
+            div(class="home-layouts__wrapper")
+            div(class="home-layouts__content")
+              div(class="home-layouts__slider owl-carousel owl-theme")
+              div(class="home-layouts__texts")
+      div(class="plans__list")
+        each item in [{title: "Типовый этаж", img: "img/plans/list/1.jpg"},{title: "-1 Этаж", img: "img/plans/list/2.jpg"},{title: "Паркинг", img:"img/plans/list/3.jpg"}]
+          a(data-fancybox, href=item.img, class="plans__item block")
+            h5= item.title
+            div(class="plans__img")
+              img(src=item.img)

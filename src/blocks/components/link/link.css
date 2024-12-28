@@ -1,0 +1,38 @@
+.link {
+  display: inline-block;
+  padding: 1rem 2.25rem;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 12px;
+  @apply transition-all duration-300;
+
+  &.filled {
+    @apply bg-primary text-text;
+
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-primary/80;
+      }
+    }
+  }
+
+  &.outlined {
+    @apply border-primary border-[1px] text-text;
+    /* box-shadow: 0px 0px 0px 0px #4a3645; */
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-primary/80;
+      }
+    }
+  }
+
+  &.light {
+    @apply bg-light text-text;
+
+    @media (hover: hover) {
+      &:hover {
+        @apply bg-light/30;
+      }
+    }
+  }
+}

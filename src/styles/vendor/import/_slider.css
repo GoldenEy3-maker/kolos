@@ -1,0 +1,23 @@
+@import "@vueform/slider/themes/default.css";
+
+
+
+
+:root {
+    --slider-bg: #D1D5DB;
+    --slider-connect-bg: #1C8C67;
+    --slider-connect-bg-disabled: #E0DFDE;
+    --slider-height: 2px !important;
+    --slider-vertical-height: 300px; 
+    --slider-radius: 9999px;
+
+    --slider-handle-bg: #1C8C67;
+    --slider-handle-border: 0;
+    --slider-handle-width: 14px !important;
+    --slider-handle-height: 14px !important;
+    --slider-handle-radius: 9999px;
+    --slider-handle-shadow: none;
+    --slider-handle-shadow-active: none;
+    --slider-handle-ring-width: 3px;
+    --slider-handle-ring-color: #10B98130;
+}
