@@ -110,6 +110,7 @@
 
     ol,
     ul {
+      list-style: inside circle;
       margin: 20px 0;
       @media (max-width: 576px) {
         margin: 10px 0;
@@ -118,6 +119,10 @@
         margin-bottom: 0;
         font-weight: 400;
       }
+    }
+
+    a {
+      @apply underline decoration-white underline-offset-4;
     }
   }
   &__img {

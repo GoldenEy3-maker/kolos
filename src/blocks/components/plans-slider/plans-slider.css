@@ -271,7 +271,7 @@
 
     &.current {
       cursor: default;
-      @apply bg-primary/30;
+      @apply shadow-[inset_0_0_0_4px] shadow-primary;
     }
   }
 
@@ -410,7 +410,7 @@
       font-weight: 400;
       margin-right: 30px;
       cursor: pointer;
-      @apply text-text/40 transition-all duration-700;
+      @apply transition-all duration-700 text-text/40;
 
       &.active {
         font-weight: 500;
@@ -605,7 +605,7 @@
     h5 {
       opacity: 1;
       transform: translateY(0);
-      @apply transition-all delay-300 duration-700;
+      @apply transition-all duration-700 delay-300;
     }
   }
 }
