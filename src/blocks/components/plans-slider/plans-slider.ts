@@ -190,10 +190,6 @@ export default class PlansSlider {
         if (index == null) {
           return false;
         }
-        console.log(
-          $(".home-layouts__mini-block").eq(index),
-          $(".home-layouts__mini-block").eq(index).offset().top,
-        );
         // let currentOffset = $('.home-layouts__mini-block').eq(index).offset().top -
         //                     $('.scroll-wrapper').offset().top;
         let currentOffset =

@@ -13,7 +13,6 @@ export class Modal {
     );
     this.resetButton = document.querySelector(".js-modal-reset");
     this.init();
-    console.log(this, "this");
   }
 
   protected init(): void {
@@ -76,7 +75,6 @@ export class Modal {
         } else {
           this.resetButton?.classList.add("active");
 
-          console.log("open");
           this.open();
         }
       }

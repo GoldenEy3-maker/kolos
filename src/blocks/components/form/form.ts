@@ -22,7 +22,6 @@ export class Form {
 
   constructor(element: HTMLElement | Element) {
     this.form = element;
-    console.log(this);
     this.action = element.getAttribute("action") || "";
     this.inputs = this.form.querySelectorAll("input");
     this.textarea = this.form.querySelectorAll("textarea");
@@ -38,8 +37,6 @@ export class Form {
     this.init();
   }
   init() {
-    console.log(this);
-
     this.initMasks();
     this.onSubmit();
     this.onChange();
@@ -72,7 +69,6 @@ export class Form {
   }
 
   isSended() {
-    console.log(this.id, "ID");
     if (
       this.sendedForm.includes(<string>this.id) &&
       this.id === "choose-consult"
@@ -111,8 +107,6 @@ export class Form {
         return false;
       }
       this.dopInfo = (this.form as HTMLElement).dataset.dopinfo || null;
-      console.log(this.data);
-      console.log(this.sendedForm.includes(<string>this.id));
       if (true) {
         HTTP.sendAjax(
           this.action,
@@ -124,13 +118,11 @@ export class Form {
               //@ts-ignore
               this.dopInfo = (this.form as HTMLElement).dataset.dopinfo;
               if ((this.dopInfo as any).length) {
-                console.log("ym(94591627,'reachGoal','to book')", this.dopInfo);
                 //@ts-ignore
-                ym(94591627, "reachGoal", "to book");
+                // ym(94591627, "reachGoal", "to book");
               } else {
-                console.log("ym(94591627,'reachGoal','calls')", this.dopInfo);
                 //@ts-ignore
-                ym(94591627, "reachGoal", "calls");
+                // ym(94591627, "reachGoal", "calls");
               }
               //@ts-ignore
               this.message?.innerHTML = `
@@ -156,10 +148,8 @@ export class Form {
             }
           },
           (data: AxiosError) => {
-            console.log(data);
             //@ts-ignore
             this.message?.textContent = data.data;
-            console.log(this.sendedForm.includes(<string>this.id));
             this.sendedForm.push(<string>this.id);
           },
         );
@@ -167,7 +157,6 @@ export class Form {
     });
   }
   changeHeader(text: string) {
-    console.log(this, "FORM123");
     if (this.title) {
       this.title.textContent = text;
     }
