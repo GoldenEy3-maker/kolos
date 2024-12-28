@@ -97,6 +97,10 @@ const paths = {
     src: "./src/site.webmanifest",
     dist: "./dist/",
   },
+  privacyPolice: {
+    src: "./src/privacy-police/*.pdf",
+    dist: "./dist/privacy-police/",
+  },
   gzip: {
     src: "./src/.htaccess",
     dist: "./dist/",
@@ -109,6 +113,12 @@ gulp.task("clean", () => {
 
 gulp.task("manifest", () => {
   return gulp.src(paths.manifest.src).pipe(gulp.dest(paths.manifest.dist));
+});
+
+gulp.task("privacy-police", () => {
+  return gulp
+    .src(paths.privacyPolice.src)
+    .pipe(gulp.dest(paths.privacyPolice.dist));
 });
 
 gulp.task("favicons", () => {
@@ -350,6 +360,7 @@ export const development = gulp.series(
     "fonts",
     "favicons",
     "manifest",
+    "privacy-police",
   ]),
   gulp.parallel("serve"),
 );
@@ -365,6 +376,7 @@ export const prod = gulp.series(
     "fonts",
     "favicons",
     "manifest",
+    "privacy-police",
     "gzip",
   ]),
 );
