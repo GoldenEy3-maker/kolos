@@ -97,6 +97,8 @@ export class Form {
     this.form.addEventListener("submit", (e) => {
       e.preventDefault();
 
+      console.log("submit");
+
       // @ts-ignore
       this.button?.disabled = true;
       //@ts-ignore
@@ -104,6 +106,7 @@ export class Form {
 
       if (!this.collectData()) {
         console.error("Форма не прошла валидацию");
+        this.button?.removeAttribute("disabled");
         return false;
       }
       this.dopInfo = (this.form as HTMLElement).dataset.dopinfo || null;
@@ -113,8 +116,7 @@ export class Form {
           { data: this.data, dopInfo: this.dopInfo },
           (data: AxiosResponse) => {
             if (data.status) {
-              // @ts-ignore
-              this.button?.disabled = false;
+              this.button?.removeAttribute("disabled");
               //@ts-ignore
               this.dopInfo = (this.form as HTMLElement).dataset.dopinfo;
               if ((this.dopInfo as any).length) {
@@ -148,6 +150,7 @@ export class Form {
             }
           },
           (data: AxiosError) => {
+            this.button?.removeAttribute("disabled");
             //@ts-ignore
             this.message?.textContent = data.data;
             this.sendedForm.push(<string>this.id);
@@ -197,6 +200,8 @@ export class Form {
       }
       this.data.push(obj);
     });
+
+    console.log(this.data);
 
     return result;
   }
