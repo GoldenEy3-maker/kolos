@@ -311,10 +311,10 @@ block content
         span(class="section__subtitle") Новости и акции
         h2(class="section__title") Первым быть в курсе событий
       div(class="news__list")
-        each item in [{title: "«Колос» аккредитован под военную ипотеку от Сбербанка", img: "img/news-1.png", descr: "Скидка 10 000 р/м2 на все квартиры площадью от 45,2м2", time:"28 февраля 2024", datetime: "2024-02-28", headerType:"Акция"}, {title: "График приемки квартир", img: "img/news-1.png", time: "28 февраля 2024", datetime: "2024-02-28", headerType:"Новость"}]
+        each item in [{title: "Жилой дом «Колос» аккредитован ведущими банками", img: "img/news-1.png", left: "<p>С радостью сообщаем, что жилой дом «Колос» на Интернациональной, 8 получил аккредитацию в крупнейших банках:</p><ul><li>ВТБ</li><li>Банк Левобережный</li><li>Сбербанк</li><li>ДОМ.РФ</li></ul><p>Теперь покупка квартиры в жилом доме «Колос» стала еще удобнее и доступнее благодаря широкому выбору ипотечных программ с привлекательными условиями.</p>", time:"28 декабря 2024", datetime: "2024-12-28", headerType:"Новость"}, {title: "ГК «Восход» и компания «Вотэтодом» стали партнёрами!", img: "img/detail-slider/3.webp", time: "28 декабря 2024", datetime: "2024-12-28", headerType:"Новость", left: "<p>Рады сообщить, что Группа компаний «Восход» заключила партнёрское соглашение с компанией «Вотэтодом» на продажу квартир в жилом доме «Колос», расположенном по адресу: улица Интернациональная, д. 8.</p><p>Теперь приобрести квартиру в современном и комфортном доме стало ещё проще!</p><p>Как получить консультацию и выбрать квартиру?</p><ul><li>Посетите наш сайт: <a href='https://xn--b1aeygabza2h.xn--p1ai/objects/kolos/' target='_blank'>вотэтодом.рф</a></li><li>Свяжитесь с нами по телефону: <a href='tel:+73852556666'>+7 (3852) 55-66-66</a></li><li>Загляните в отдел продаж компании «Вотэтодом» — наши специалисты с радостью помогут вам!</li></ul>"}]
           div(
             data-button="modal-news",
-            data-markup={ title: item.title, date: item.time, datetime: item.datetime, id: "0", rightContent: "<p>right</p>", leftContent: "<p>left</p>", img: item.img },
+            data-markup={ title: item.title, date: item.time, datetime: item.datetime, id: "0", rightContent: "", leftContent: item.left, img: item.img },
             class="news__item"
           )
             div(class="news__img")
@@ -383,7 +383,7 @@ block content
       div(class="flex flex-wrap")
         div(class="col-6 col-md-10 col-td-12")
           div(class="info__form")
-            form(action="/test/form.json", class="form js-form")
+            form(action="/test/form.json", method="post", class="form js-form")
               h3 Возникли вопросы?
               div(class="message js-message")
               label(class="js-form-label")
@@ -398,6 +398,7 @@ block content
                 input(
                   type="text",
                   name="phone",
+                  class="js-mask-phone",
                   data-required="true",
                   data-type="phone"
                 )

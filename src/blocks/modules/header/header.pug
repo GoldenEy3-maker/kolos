@@ -6,10 +6,10 @@ mixin header
         a(href="/", class="header__logo")
           include ../../components/svg/logo
         nav(class="header__nav flex flex-1 items-center justify-end")
-          a(href="#apartments", class="px-5 py-2 text-lg text-white") Квартиры
-          a(href="#news", class="px-5 py-2 text-lg text-white") Новости
-          a(href="#about", class="px-5 py-2 text-lg text-white") О застройщике
-          a(href="#contacts", class="px-5 py-2 text-lg text-white") Контакты
+          a(href="#apartments", class="header__nav-link px-5 py-2 text-lg text-white") Квартиры
+          a(href="#news", class="header__nav-link px-5 py-2 text-lg text-white") Новости
+          a(href="#about", class="header__nav-link px-5 py-2 text-lg text-white") О застройщике
+          a(href="#contacts", class="header__nav-link px-5 py-2 text-lg text-white") Контакты
         a(class="outlined link header__phone", href="tel:+73852556666") +7 (3852) 55-66-66
         div(class="header__burger js-modal-menu-toggle js-modal-reset")
           svg(
