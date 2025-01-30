@@ -16,10 +16,13 @@ class ModalForm extends Modal {
 
   open(id: string | undefined) {
     super.open();
+    this.form?.form.classList.add("consult-form");
+    this.form?.form.classList.remove("booking-form");
     if (id === "choose-consult") {
       this.form?.setId(id);
       this.form?.isSended();
       this.form?.changeHeader("Обратный звонок");
+      this.form?.form.classList.add("consult-form");
     } else if (id === "choose-apartments") {
       this.form?.setId(id);
       this.form?.isSended();

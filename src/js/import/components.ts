@@ -17,6 +17,7 @@ import {
   PlacesTextSlider,
 } from "../../blocks/components/places/places";
 import Mask from "../classes/Mask";
+import FloatingButton from "../../blocks/modules/floating-button/floating-button";
 
 const init = () => {
   new PageLoader();
@@ -24,6 +25,7 @@ const init = () => {
   Sliders();
   Maps();
   new Mask(".js-mask-phone");
+  new FloatingButton();
 };
 
 const Maps = () => {

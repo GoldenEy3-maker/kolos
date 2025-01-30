@@ -4,7 +4,7 @@ mixin modal-form
       div(class="container")
         div(class="flex flex-wrap modal__inner")
           form(
-            action="/test/form.json",
+            action="/mock/map.json",
             data-dopinfo="",
             class="col-7 col-md-9 col-td-12 form js-form-modal"
           )
@@ -22,6 +22,7 @@ mixin modal-form
             label(class="js-form-label")
               span Некорректно введенный телефон
               input(
+                class="js-mask-phone",
                 type="text",
                 name="phone",
                 data-required="true",
@@ -31,6 +32,6 @@ mixin modal-form
             div(class="flex form__footer")
               p Нажимая кнопку, вы соглашаетесь
                 br 
-                | с&nbsp;нашей политикой 
+                | с&nbsp;нашей политикой
                 a(href="#") обработки персональных данных
               button(type="submit", class="light link") Заказать звонок

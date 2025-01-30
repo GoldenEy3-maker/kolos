@@ -41,7 +41,7 @@ block content
               data-button=""
             ) Выбрать квартиру
             a(
-              class="outlined js-modal-form-toggle link",
+              class="outlined link",
               href="#",
               data-id="choose-consult",
               data-button="modal-form"
@@ -383,7 +383,11 @@ block content
       div(class="flex flex-wrap")
         div(class="col-6 col-md-10 col-td-12")
           div(class="info__form")
-            form(action="/test/form.json", method="post", class="form js-form")
+            form(
+              action="/mock/map.json",
+              method="post",
+              class="form questions-form js-form"
+            )
               h3 Возникли вопросы?
               div(class="message js-message")
               label(class="js-form-label")
@@ -416,17 +420,15 @@ block content
             h3(class="info__title") Отдел продаж
             div(class="info__social-list")
               div(class="info__social-item flex")
-                //- div(class="info__social-img")
-                //-   img(src="img/info/pin.svg", loading="lazy")
-                div(class="info__social-content")
-                  h6 Барнаул, пр-т.&nbsp;Комсомольский,&nbsp;80Е
-                  p пн-пт: 8:30-18:00
-              div(class="info__social-item flex")
-                //- div(class="info__social-img")
-                //-   img(src="img/info/phone.svg", loading="lazy")
                 div(class="info__social-content")
                   h6
                     a(href="tel:+73852556666") +7 (3852) 55-66-66
+                  p пн-пт: 8:30-18:00
+              div(class="info__social-item flex")
+                //- div(class="info__social-img")
+                //-   img(src="img/info/pin.svg", loading="lazy")
+                div(class="info__social-content")
+                  p(class="!text-primary !mb-1") Барнаул, пр-т.&nbsp;Комсомольский,&nbsp;80Е
                   p пн-пт: 8:30-18:00
 
 block scripts

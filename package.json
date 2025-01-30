@@ -11,7 +11,8 @@
   "scripts": {
     "dev": "NODE_ENV=development gulp",
     "build": "NODE_ENV=production gulp prod",
-    "test": "jest"
+    "test": "jest",
+    "scripts": "NODE_ENV=production gulp scripts"
   },
   "devDependencies": {
     "@babel/core": "^7.18.6",

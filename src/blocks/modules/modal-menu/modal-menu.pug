@@ -9,15 +9,18 @@ mixin modal-menu
                 div(class="modal-menu__item")
                   a(href=item.href)= item.title
           div(class="col-2")
-          div(class="col-3")
+          div(class="col-3 modal-menu__contacts-wrapper")
             div(class="modal-menu__contacts")
+              p(class="modal-menu__phone")
+                a(href="tel:+73852385252") + 7 (3852) 38-52-52
               div(class="modal-menu__contact")
-                div(class="modal-menu__contact-title") Адрес дома и офиса продаж:
+                div(class="modal-menu__contact-title") Жилой дом
                 div(class="modal-menu__contact-subtitle") Барнаул, ул. Интернациональная 8
               div(class="modal-menu__contact")
-                div(class="modal-menu__contact-title") Отдел продаж:
+                div(class="modal-menu__contact-title") Офис продаж:
                 div(class="modal-menu__contact-subtitle")
-                  a(href="tel:+73852631010") +7 (3852) 58-49-16
+                  p Барнаул, ул. Кленова 11а
+                  a(href="mailto:sales@peremena.ru") sales@peremena.ru
           div(class="col-1")
         div(class="flex justify-end modal-menu__social")
           div(class="flex footer__social")

@@ -4,3 +4,4 @@ kolos
 dist
 .vscode
 *.zip
+*.php

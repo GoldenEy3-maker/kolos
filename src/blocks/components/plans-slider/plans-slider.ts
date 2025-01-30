@@ -6,6 +6,7 @@ import "owl.carousel";
 import "./jquery.scrollbar.css";
 
 import "jquery.scrollbar";
+import ModalFormFabric from "../../modules/modal-form/modal-form";
 
 export default class PlansSlider {
   constructor() {
@@ -72,96 +73,98 @@ export default class PlansSlider {
         }
       });
 
-      // if (process.env.NODE_ENV === "development") {
-      var jsonObject = [
-        [
-          {
-            title: "1-комнатная квартира",
-            dopCostInfo: "",
-            img: [
-              "img/plans/м-кв.1-1.png",
-              "img/plans/р-кв.1-1.png",
-              "img/plans/кв.1.png",
-            ],
-            cost: "",
-            rooms: "1",
-            sqrtLive: "14.2",
-          },
-          {
-            title: "1-комнатная квартира",
-            dopCostInfo: "",
-            img: [
-              "img/plans/м-кв.2-1.jpg",
-              "img/plans/р-кв.2-1.png",
-              "img/plans/кв.2.png",
-            ],
-            cost: "",
-            rooms: "1",
-            sqrtLive: "14.9",
-          },
-          {
-            title: "2-комнатная квартира",
-            dopCostInfo: "",
-            img: [
-              "img/plans/м-кв.3-1.jpg",
-              "img/plans/р-кв.3-1.png",
-              "img/plans/кв.3.png",
-            ],
-            cost: "",
-            rooms: "2",
-            sqrtLive: "27.5",
-          },
-          {
-            title: "1-комнатная квартира",
-            dopCostInfo: "",
-            img: [
-              "img/plans/м-кв.4-1.jpg",
-              "img/plans/р-кв.4-1.png",
-              "img/plans/кв.4.png",
-            ],
-            cost: "",
-            rooms: "1",
-            sqrtLive: "14.2",
-          },
-          {
-            title: "1-комнатная квартира",
-            dopCostInfo: "",
-            img: [
-              "img/plans/м-кв.5-1.jpg",
-              "img/plans/р-кв.5-1.png",
-              "img/plans/кв.5.png",
-            ],
-            cost: "",
-            rooms: "1",
-            sqrtLive: "14.2",
-          },
-          {
-            title: "1-комнатная квартира",
-            dopCostInfo: "",
-            img: [
-              "img/plans/м-кв.6-1.png",
-              "img/plans/р-кв.6-1.png",
-              "img/plans/кв.6.png",
-            ],
-            cost: "",
-            rooms: "1",
-            sqrtLive: "15.3",
-          },
-          {
-            title: "1-комнатная квартира",
-            dopCostInfo: "",
-            img: [
-              "img/plans/м-кв.7-1.jpg",
-              "img/plans/р-кв.7-1.png",
-              "img/plans/кв.7.png",
-            ],
-            cost: "",
-            rooms: "1",
-            sqrtLive: "15.8",
-          },
-        ],
-      ];
-      // }
+      if (process.env.NODE_ENV === "development") {
+        var jsonObject = [
+          [
+            {
+              title: "1-комнатная квартира",
+              dopCostInfo: "",
+              img: [
+                "img/plans/м-кв.1-1.png",
+                "img/plans/р-кв.1-1.png",
+                "img/plans/кв.1.png",
+              ],
+              cost: "",
+              rooms: "1",
+              sqrtLive: "14.2",
+            },
+            {
+              title: "1-комнатная квартира",
+              dopCostInfo: "",
+              img: [
+                "img/plans/м-кв.2-1.jpg",
+                "img/plans/р-кв.2-1.png",
+                "img/plans/кв.2.png",
+              ],
+              cost: "",
+              rooms: "1",
+              sqrtLive: "14.9",
+            },
+            {
+              title: "2-комнатная квартира",
+              dopCostInfo: "",
+              img: [
+                "img/plans/м-кв.3-1.jpg",
+                "img/plans/р-кв.3-1.png",
+                "img/plans/кв.3.png",
+              ],
+              cost: "",
+              rooms: "2",
+              sqrtLive: "27.5",
+            },
+            {
+              title: "1-комнатная квартира",
+              dopCostInfo: "",
+              img: [
+                "img/plans/м-кв.4-1.jpg",
+                "img/plans/р-кв.4-1.png",
+                "img/plans/кв.4.png",
+              ],
+              cost: "",
+              rooms: "1",
+              sqrtLive: "14.2",
+            },
+            {
+              title: "1-комнатная квартира",
+              dopCostInfo: "",
+              img: [
+                "img/plans/м-кв.5-1.jpg",
+                "img/plans/р-кв.5-1.png",
+                "img/plans/кв.5.png",
+              ],
+              cost: "",
+              rooms: "1",
+              sqrtLive: "14.2",
+            },
+            {
+              title: "1-комнатная квартира",
+              dopCostInfo: "",
+              img: [
+                "img/plans/м-кв.6-1.png",
+                "img/plans/р-кв.6-1.png",
+                "img/plans/кв.6.png",
+              ],
+              cost: "",
+              rooms: "1",
+              sqrtLive: "15.3",
+            },
+            {
+              title: "1-комнатная квартира",
+              dopCostInfo: "",
+              img: [
+                "img/plans/м-кв.7-1.jpg",
+                "img/plans/р-кв.7-1.png",
+                "img/plans/кв.7.png",
+              ],
+              cost: "",
+              rooms: "1",
+              sqrtLive: "15.8",
+            },
+          ],
+        ];
+      } else {
+        var jsonObject = JSON.parse($(".home-layouts").attr("data-json"));
+      }
 
       //home layout
       let layoutsObj = jsonObject;
@@ -318,7 +321,7 @@ export default class PlansSlider {
                         }</h5>
                         <span class="subtitle">${item["dopCostInfo"]}</span>
                       </div>
-                     <a class="filled link link-plans uppercase" href="#" id="${
+                     <a class="uppercase filled link link-plans" href="#" id="${
                        item["title"]
                      }" data-id="choose-apartments" data-button="modal-form">
                         Выбрать квартиру
@@ -334,9 +337,13 @@ export default class PlansSlider {
           const data = $(e.target).attr("id");
           const form = modal.find("form");
 
+          form.addClass("booking-form");
+          form.removeClass("consult-form");
+
           form.attr("data-dopinfo", data);
           modal.addClass("active");
           modalTitle.text("Заявка на бронирование");
+
           $("body").addClass("active-modal");
           $(".js-modal-reset").addClass("active");
           form.find(".js-message").hide();
@@ -346,6 +353,7 @@ export default class PlansSlider {
             valueHolder.val("");
           });
         });
+
         // refresh state
         $(".home-layouts__mini-block").eq(0).addClass("current");
         $(".home-layouts__slider").trigger("refresh.owl.carousel");

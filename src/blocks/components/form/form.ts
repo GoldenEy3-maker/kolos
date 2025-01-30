@@ -53,7 +53,6 @@ export class Form {
       i.style.display = "none";
     });
   }
-
   openForm() {
     //@ts-ignore
     this.message.style.display = "none";
@@ -97,8 +96,6 @@ export class Form {
     this.form.addEventListener("submit", (e) => {
       e.preventDefault();
 
-      console.log("submit");
-
       // @ts-ignore
       this.button?.disabled = true;
       //@ts-ignore
@@ -119,13 +116,13 @@ export class Form {
               this.button?.removeAttribute("disabled");
               //@ts-ignore
               this.dopInfo = (this.form as HTMLElement).dataset.dopinfo;
-              if ((this.dopInfo as any).length) {
-                //@ts-ignore
-                // ym(94591627, "reachGoal", "to book");
-              } else {
-                //@ts-ignore
-                // ym(94591627, "reachGoal", "calls");
-              }
+              // if ((this.dopInfo as any).length) {
+              //@ts-ignore
+              // ym(94591627, "reachGoal", "to book");
+              // } else {
+              //@ts-ignore
+              // ym(94591627, "reachGoal", "calls");
+              // }
               //@ts-ignore
               this.message?.innerHTML = `
                                 <h5>${data.data.title}</h5>
@@ -133,9 +130,27 @@ export class Form {
                             `;
 
               this.hideForm();
+
               this.message?.classList.remove("error");
 
+              (this.form as HTMLFormElement).reset();
+
               this.sendedForm.push(<string>this.id);
+
+              if (this.form.classList.contains("booking-form")) {
+                // @ts-ignore
+                ym(94591627, "reachGoal", "to book");
+              }
+
+              if (this.form.classList.contains("consult-form")) {
+                // @ts-ignore
+                ym(94591627, "reachGoal", "callback");
+              }
+
+              if (this.form.classList.contains("questions-form")) {
+                // @ts-ignore
+                ym(94591627, "reachGoal", "questions");
+              }
             } else {
               //@ts-ignore
               this.button?.disabled = false;

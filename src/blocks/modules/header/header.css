@@ -26,6 +26,7 @@
   &__logo {
     svg {
       max-width: 100%;
+
       path {
         @apply transition-all delay-[100ms] duration-[300ms];
       }
@@ -34,23 +35,26 @@
 
   &__phone {
     padding: 0.75rem 2rem;
-    @apply !text-primary;
+    /* @apply !text-primary; */
 
-    @media (hover: hover) {
+    /* @media (hover: hover) {
       &:hover {
         @apply !text-text;
       }
-    }
+    } */
 
     @media (max-width: 910px) {
       display: none;
     }
   }
+
   &__button {
     margin-right: 45px;
+
     @media (max-width: 991px) {
       margin-right: 30px;
     }
+
     @media (max-width: 910px) {
       display: none;
     }
@@ -70,6 +74,7 @@
     svg {
       @apply transition-all duration-500;
     }
+
     &.active {
       position: relative;
 
@@ -77,6 +82,7 @@
         &:first-child {
           transform: translate(0, 0) rotate(-45deg) scaleX(-1);
         }
+
         &:last-child {
           transform: translate(0, -12px) rotate(45deg);
         }

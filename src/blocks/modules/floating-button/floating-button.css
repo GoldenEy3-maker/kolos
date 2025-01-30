@@ -1,0 +1,21 @@
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: -20px;
+  z-index: 90;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+
+  &[aria-hidden="false"] {
+    opacity: 1;
+    visibility: visible;
+    right: 20px;
+  }
+}

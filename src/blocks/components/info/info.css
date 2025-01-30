@@ -47,7 +47,7 @@
     &-content {
       h6 {
         margin-bottom: 0.42em;
-        font-size: 24px;
+        font-size: 28px;
         font-weight: 500;
         line-height: 1.4;
         @apply text-primary;
