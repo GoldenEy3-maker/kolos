@@ -1,5 +1,7 @@
 .link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
   padding: 1rem 2.25rem;
   font-size: 18px;
   font-weight: 500;
@@ -17,7 +19,8 @@
   }
 
   &.outlined {
-    @apply border-primary border-[1px] text-text;
+    @apply border-[1px] border-primary text-text;
+
     /* box-shadow: 0px 0px 0px 0px #4a3645; */
     @media (hover: hover) {
       &:hover {
@@ -32,6 +35,17 @@
     @media (hover: hover) {
       &:hover {
         @apply bg-light/30;
+      }
+    }
+  }
+
+  &.ghost {
+    padding: 0;
+    @apply text-text;
+
+    @media (hover: hover) {
+      &:hover {
+        @apply text-primary;
       }
     }
   }

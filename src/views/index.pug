@@ -18,7 +18,7 @@ block content
   section#about(class="first-description")
     div(class="container")
       div(class="flex flex-wrap gap-y-10")
-        div(class="col-6 col-md-10")
+        div(class="col-7 col-md-10")
           h5(class="first-description__title") Новый жилой дом, гармонично сочетающий стильную архитектуру, современные удобства и виды на исторический пейзаж
           address(class="first-description__address")
             svg(
@@ -34,7 +34,7 @@ block content
               )
             span Барнаул, ул. Интернациональная 8
           p(class="first-description__text") Окруженный парками и&nbsp;аллеями, удобными магазинами и&nbsp;ресторанами, &laquo;Колос&raquo; предлагает идеальное расположение для удовлетворения всех потребностей жителей. Вы&nbsp;сможете наслаждаться современными интерьерами, высококачественными материалами и&nbsp;продуманными удобствами.
-          div(class="first-description__actions flex flex-wrap gap-5")
+          div(class="first-description__actions flex flex-wrap gap-x-7 gap-y-5")
             a(
               class="filled js-modal-form-toggle link",
               href="#apartments",
@@ -46,7 +46,30 @@ block content
               data-id="choose-consult",
               data-button="modal-form"
             ) Заказать звонок
-        div(class="col-2 col-md-0")
+            a(class="ghost link", href="https://wa.me/79132534979", target="_blank")
+              svg(
+                width="24",
+                height="24",
+                viewbox="0 0 24 24",
+                fill="none",
+                xmlns="http://www.w3.org/2000/svg"
+              )
+                path(
+                  d="M12.0003 1.50751C6.28318 1.50929 1.50666 6.29197 1.50668 12.0044C1.50669 14.0639 2.11964 16.0982 3.26367 17.8181L1.50342 22.5013L7.39782 21.4354C8.8377 22.1391 10.4188 22.4917 12.0003 22.4928C17.7224 22.4967 22.5034 17.7204 22.5034 12.0044C22.5034 6.29497 17.7207 1.50413 12.0003 1.50751Z",
+                  stroke="#FBBF51",
+                  stroke-width="1.5",
+                  stroke-linecap="round",
+                  stroke-linejoin="round"
+                )
+                path(
+                  d="M12.578 16.6272C13.9981 17.5388 15.4786 16.8748 16.5097 16.1058C17.2219 15.5746 17.1983 14.5501 16.59 13.9025L15.3905 12.6255C14.9355 13.0805 14.0488 13.3058 13.4327 13.1182C12.1085 12.7152 11.5528 12.0252 11.1024 11.3236C10.5851 10.5178 11.1693 9.31431 11.6243 8.85932L10.2873 7.63873C9.72361 7.12417 8.86746 7.03734 8.37567 7.62097C7.40261 8.77568 6.79745 10.5288 7.51414 11.645C8.80071 13.6489 10.574 15.3408 12.578 16.6272Z",
+                  stroke="#FBBF51",
+                  stroke-width="1.5",
+                  stroke-linecap="round",
+                  stroke-linejoin="round"
+                )
+              span Написать в WhatsApp
+        div(class="col-1 col-md-0")
         div(class="col-4 col-md-10")
           div(class="factoid") 
             div(class="factoid__item") 
@@ -422,13 +445,18 @@ block content
               div(class="info__social-item flex")
                 div(class="info__social-content")
                   h6
+                    a(href="https://wa.me/79132534979", target="_blank") +7 (913) 253-49-79
+                  p Написать в WhatsApp
+              div(class="info__social-item flex")
+                div(class="info__social-content")
+                  h6
                     a(href="tel:+73852556666") +7 (3852) 55-66-66
                   p пн-пт: 8:30-18:00
               div(class="info__social-item flex")
                 //- div(class="info__social-img")
                 //-   img(src="img/info/pin.svg", loading="lazy")
                 div(class="info__social-content")
-                  p(class="!text-primary !mb-1") Барнаул, пр-т.&nbsp;Комсомольский,&nbsp;80Е
+                  p(class="!mb-1 !text-primary") Барнаул, пр-т.&nbsp;Комсомольский,&nbsp;80Е
                   p пн-пт: 8:30-18:00
 
 block scripts
