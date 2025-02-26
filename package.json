@@ -11,6 +11,7 @@
   "scripts": {
     "dev": "NODE_ENV=development gulp",
     "build": "NODE_ENV=production gulp prod",
+    "build:styles": "NODE_ENV=production gulp styles",
     "test": "jest",
     "scripts": "NODE_ENV=production gulp scripts"
   },
